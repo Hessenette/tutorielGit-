@@ -2,7 +2,7 @@ package tuto_git;
 
 import java.awt.Frame;
 
-public class Application extends Frame {
+public class Application extends Frame implements WindowListener {
 
 	public static void main(String[] args) {
 		new Application();
@@ -20,6 +20,11 @@ public class Application extends Frame {
 		this.add(vue);
 		this.pack();
 		this.setVisible(true);
+		this.addWindowListener(this);
+	}
+
+	public void WindowClosing(WindowEvent e) {
+		System.exit(O);
 	}
 
 }
